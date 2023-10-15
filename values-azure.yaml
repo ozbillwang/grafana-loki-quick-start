@@ -1,0 +1,19 @@
+# https://github.com/grafana/loki/blob/main/production/helm/loki/values.yaml
+
+loki:
+  commonConfig:
+    replication_factor: 3
+  storage:
+    bucketNames:
+      chunks: chunks
+      ruler: ruler
+      admin: admin
+    type: azure
+    azure:
+      # In azure, it is storage account name, no space, only small letters and numbers.
+      # make sure you have created storage account
+      accountName: <global_unique_id>loki
+      # make sure you have added kubernetes nodes pool as role of "Storage Blob Data Contributor" on that storage account.
+      useManagedIdentity: true
+singleBinary:
+  replicas: 3
