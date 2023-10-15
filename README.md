@@ -1,4 +1,6 @@
-# https://grafana.com/docs/loki/latest/setup/install/helm/install-monolithic/
+# Grafana Loki Guick Start
+
+Reference: https://grafana.com/docs/loki/latest/setup/install/helm/install-monolithic/
 
 ```
 helm repo add grafana https://grafana.github.io/helm-charts
@@ -15,3 +17,4 @@ helm -n loki upgrade --install --values values-aws.yaml loki grafana/loki
 
 # Azure
 helm -n loki upgrade --install --values values-azure.yaml loki grafana/loki
+```
