@@ -6,7 +6,7 @@ loki:
   auth_enabled: false
   storage:
     bucketNames:
-      # make sure the bucketNames are global unique
+      # make sure the buckets have been create and their names are global unique
       chunks: <account_id>-loki-chunks
       ruler: <account_id>-loki-ruler
       admin: <account_id>-loki-admin

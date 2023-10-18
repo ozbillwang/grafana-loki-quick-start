@@ -3,6 +3,7 @@
 loki:
   commonConfig:
     replication_factor: 3
+  auth_enabled: false
   storage:
     bucketNames:
       chunks: chunks

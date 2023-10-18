@@ -1,0 +1,6 @@
+# https://github.com/grafana/helm-charts/blob/main/charts/promtail/values.yaml
+
+config:
+  clients:
+    # -- set log pushing target url to loki gateway
+    - url: http://loki-gateway.loki.svc.cluster.local/loki/api/v1/push

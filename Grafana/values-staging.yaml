@@ -1,0 +1,18 @@
+# https://github.com/grafana/helm-charts/blob/main/charts/grafana/values.yaml
+
+ingress:
+  enabled: true
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    cert-manager.io/cluster-issuer: letsencrypt
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+  labels: {}
+  path: /
+  pathType: Prefix
+  hosts:
+    - grafana.staging.example.com
+  extraPaths: []
+  tls:
+    - secretName: grafana-staging-tls
+      hosts:
+        - grafana.staging.example.comu
