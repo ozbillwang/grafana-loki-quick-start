@@ -1,4 +1,4 @@
-# https://grafana.com/docs/loki/latest/setup/install/helm/install-monolithic/
+### quick start
 
 Good practices to set values.yaml files for different environments
 
