@@ -16,3 +16,12 @@ ingress:
     - secretName: grafana-staging-tls
       hosts:
         - grafana.staging.example.comu
+
+persistence:
+  type: pvc
+  enabled: true
+  accessModes:
+    - ReadWriteOnce
+  size: 10Gi
+  finalizers:
+    - kubernetes.io/pvc-protection
